@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html  ng-app="HomePageApp">
+<% include ../includes/head %>
+<style type="text/css">
+</style>
+<body>
+	<% include ../includes/header %>
+	<main class="<%= layout %>"  ng-controller="pageCtrl">
+    Hello World, {{ username }}
+    <div>{{holidayList}}</div>
+
+			<holiday-list></holiday-list>
+
+    <a ng-click="getHolidayData()" class="btn">Get Holiday</a>
+		<a ng-click="testSocket()" class="btn">Test</a>
+  </main>
+	<% include ../includes/footer %>
+
+	<script type="text/javascript" src="/js/service.js"></script>
+	<script type="text/javascript" src="/js/<%= js %>.js"></script>
+
+</body>
+
+</html>
